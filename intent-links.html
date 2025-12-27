@@ -1,0 +1,637 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"/> <title>Android FRP Activity Launcher</title> <style> body { 
+      font-family: Arial, sans-serif; margin: 20px auto; max-width: 800px; background: #f9f9f9; color: #333;
+    }
+    h2 { text-align: center; color: #444;
+    }
+    section { background: #fff; margin-bottom: 20px; padding: 15px 20px; border-radius: 8px; box-shadow: 0 2px 4px 
+      rgba(0,0,0,0.1);
+    }
+    h3 { margin-top: 0; color: #222; border-bottom: 2px solid #e0e0e0; padding-bottom: 5px;
+    }
+    ul { list-style: none; padding-left: 0; } li { margin: 6px 0; } a { color: #0066cc; text-decoration: none; font-weight: 
+      500;
+    }
+    a:hover { text-decoration: underline; } header { text-align: center; font-size: 0.8em; color: #777; margin: 30px 0 10px;
+    }
+    footer { text-align: center; font-size: 0.8em; color: #777; margin: 30px 0 10px;
+    }
+  </style> </head> <body><select id="sectionSelector"><option value="all">Show All</option><option 
+value="general_android">General Android</option><option value="lock_screen_&amp;_security">Lock Screen &amp; 
+Security</option><option value="device_settings">Device Settings</option><option value="third_party_apps">3rd Party 
+Apps</option><option value="google_apps">Google Apps</option><option value="samsung">Samsung</option><option 
+value="motorola">Motorola</option><option value="xiaomi">Xiaomi</option><option value="oneplus">OnePlus</option><option 
+value="oppo">OPPO</option><option value="infinix">Infinix</option><option value="huawei">Huawei</option><option 
+value="lg">LG</option><option value="sony">Sony</option><option value="htc">HTC</option><option 
+value="nokia">Nokia</option><option value="asus">Asus</option><option value="realme">Realme</option><option 
+value="google_pixel">Google Pixel</option></select> <h2>Android FRP Activity Launcher</h2> <header> ** FOR TESTING PURPOSES 
+ONLY ** </header> <section id="general_android">
+	<h3>General Android</h3> <ul> <li><a href="intent://com.android.settings/#Intent;scheme=android-app;end" 
+	target="_blank">Open Settings app</a></li> <li><a href="intent:#Intent;action=android.settings.SETTINGS;end" 
+	target="_blank">Open Settings (Action)</a></li> <li><a 
+	href="intent://com.android.settings.UsbSettingsActivity/#Intent;scheme=android-app;end" target="_blank">USB 
+	Settings</a></li> <li><a href="intent://com.android.settings.AdbSettingsActivity/#Intent;scheme=android-app;end" 
+	target="_blank">ADB Settings</a></li> <li><a href="intent://com.android.calculator2/#Intent;scheme=android-app;end" 
+	target="_blank">Calculator (AOSP)</a></li> <li><a href="tel:123456789" target="_blank">Dial Pad</a></li> <li><a 
+	href="tel:*#0*#" target="_blank">Secret Code</a></li> <li><a 
+	href="intent://android.media.action.IMAGE_CAPTURE#Intent;scheme=android-app;end" target="_blank">Launch Camera 
+	(Photo)</a></li> <li><a href="intent://android.media.action.VIDEO_CAPTURE#Intent;scheme=android-app;end" 
+	target="_blank">Launch Camera (Video)</a></li> <li><a 
+	href="intent://android.intent.action.INSERT#Intent;scheme=content://com.android.calendar/events" target="_blank">Add 
+	Calendar Event</a></li> <li><a href="intent://android.intent.action.PICK#Intent;scheme=content://contacts/people" 
+	target="_blank">Pick Contact</a></li> <li><a href="intent://com.android.contacts/#Intent;scheme=android-app;end" 
+	target="_blank">Open Contacts</a></li> <li><a 
+	href="intent://android.intent.action.SEND#Intent;scheme=mailto:someone@example.com" target="_blank">Compose 
+	Email</a></li> <li><a href="intent://android.intent.action.WEB_SEARCH#Intent;scheme=android-app;end?query=chatgpt" 
+	target="_blank">Web Search</a></li> <li><a href="intent://android.intent.action.DIAL#Intent;scheme=tel:+123456789" 
+	target="_blank">Open Dialer with Number</a></li> <li><a 
+	href="intent://android.intent.action.VIEW#Intent;scheme=https://www.example.com" target="_blank">Open Browser 
+	URL</a></li> <li><a href="intent://android.intent.action.QUICK_CONTACT#Intent;scheme=content://contacts/people/1" 
+	target="_blank">Quick Contact</a></li> <li><a 
+	href="intent://android.intent.action.PRINT#Intent;scheme=content://com.example.document" target="_blank">Print 
+	Document</a></li> </ul>
+</section> <section id="lock_screen_&amp;_security"> <h3>Lock Screen &amp; Security</h3> <ul> <li><a 
+	href="intent://#Intent;scheme=promote_smartlock_scheme;package=com.google.android.gms;end" target="_blank">Open 
+	Smart‑Lock (Google)</a></li> <li><a 
+	href="intent://#Intent;action=android.app.action.CHOOSE_LOCK;package=com.android.settings;end" target="_blank">Change 
+	Screen Lock Type</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SECURITY_SETTINGS;package=com.android.settings;end" target="_blank">Lock 
+	Screen &amp; Security Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.FINGERPRINT_ENROLL;package=com.android.settings;end" 
+	target="_blank">Fingerprint Enrollment</a></li> <li><a 
+	href="intent://#Intent;action=android.app.action.SET_NEW_PASSWORD;package=com.android.settings;end" target="_blank">Set 
+	New PIN/Password</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.APP_PINNING_SETTINGS;package=com.android.settings;end" 
+	target="_blank">App Pinning Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.CREDENTIAL_STORAGE_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Credential Storage Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.TRUSTED_CREDENTIALS_USER;package=com.android.settings;end" 
+	target="_blank">Trusted Credentials (User)</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.TRUSTED_CREDENTIALS_SYSTEM;package=com.android.settings;end" 
+	target="_blank">Trusted Credentials (System)</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.TRUST_AGENTS_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Trust Agents Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.PRIVACY_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Privacy Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.AUTOFILL_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Autofill Service Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.WEBAUTHN_SETTINGS;package=com.android.settings;end" 
+	target="_blank">WebAuthn (2FA) Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SIM_LOCK_SETTINGS;package=com.android.settings;end" target="_blank">SIM 
+	PIN Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.OWNER_INFO_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Owner Info Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.DEVICE_ADMIN_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Device Admin Apps</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SECURE_STARTUP_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Secure Startup</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.LOCK_AFTER_TIMEOUT;package=com.android.settings;end" 
+	target="_blank">Auto‑Lock Timeout</a></li> <li><a 
+	href="intent://#Intent;action=com.sec.android.app.servicemodeapp.ServiceModeActivity;package=com.sec.android.app.servicemodeapp;end" 
+	target="_blank">Samsung Service Mode</a></li> <li><a 
+	href="intent://#Intent;action=com.samsung.android.samsungpassautofill;package=com.samsung.android.samsungpassautofill;end" 
+	target="_blank">Samsung Pass (Autofill &amp; Biometrics)</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.BIOMETRIC_ENROLL;package=com.android.settings;end" 
+	target="_blank">Biometric Enrollment Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SCREEN_LOCK_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Screen Lock Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.KEYGUARD_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Keyguard Settings</a></li> <li><a 
+	href="intent://#Intent;action=com.samsung.android.samsungpass.settings.SettingsActivity;package=com.samsung.android.samsungpass;end" 
+	target="_blank">Samsung Pass Main Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SAFETY_HUB_SETTINGS;package=com.google.android.settings;end" 
+	target="_blank">Safety &amp; Emergency Settings</a></li> <li><a 
+	href="intent://#Intent;action=com.google.android.gms.trustagent.TrustAgentSettings;package=com.google.android.gms;end" 
+	target="_blank">Google Trust Agent Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.DEVICE_SECURITY_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Device Security Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.USER_CREDENTIALS;package=com.android.settings;end" target="_blank">User 
+	Credentials</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.PASSWORD_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Password Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.SCREEN_PINNING_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Screen Pinning Settings</a></li> <li><a 
+	href="intent://#Intent;action=com.android.settings.DIRECT_UNLOCK_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Direct Unlock Settings</a></li> <li><a 
+	href="intent://#Intent;action=com.google.android.gms.security.settings.VerifyAppsSettingsActivity;package=com.google.android.gms;end" 
+	target="_blank">Google Verify Apps Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.LOCATION_SOURCE_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Location Settings</a></li> <li><a 
+	href="intent://#Intent;action=android.settings.USAGE_ACCESS_SETTINGS;package=com.android.settings;end" 
+	target="_blank">Usage Access Settings</a></li> </ul>
+</section> <section id="device_settings"> <h3>Device Settings</h3> <ul> <li><a 
+	href="intent:#Intent;action=android.settings.DISPLAY_SETTINGS;end" target="_blank">Display Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.APP_NOTIFICATION_SETTINGS;end" target="_blank">Notification 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.BATTERY_SAVER_SETTINGS;end" 
+	target="_blank">Battery Saver Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.ACCESSIBILITY_SETTINGS;end" target="_blank">Accessibility 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.DATA_USAGE_SETTINGS;end" target="_blank">Data 
+	Usage Settings</a></li> <li><a href="intent:#Intent;action=android.settings.WIFI_SETTINGS;end" target="_blank">Wi‑Fi 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.TETHER_SETTINGS;end" target="_blank">Hotspot 
+	&amp; Tethering Settings</a></li> <li><a href="intent:#Intent;action=android.settings.AIRPLANE_MODE_SETTINGS;end" 
+	target="_blank">Airplane Mode Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.BLUETOOTH_SETTINGS;end" target="_blank">Bluetooth Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.NFC_SETTINGS;end" target="_blank">NFC Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.WIRELESS_SETTINGS;end" target="_blank">Wireless &amp; Network 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.DATE_SETTINGS;end" target="_blank">Date &amp; 
+	Time Settings</a></li> <li><a href="intent:#Intent;action=android.settings.PRINT_SETTINGS;end" target="_blank">Print 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.PROXY_SETTINGS;end" target="_blank">Proxy 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.INPUT_METHOD_SETTINGS;end" target="_blank">Input 
+	Method Settings</a></li> <li><a href="intent:#Intent;action=android.settings.USER_DICTIONARY_SETTINGS;end" 
+	target="_blank">User Dictionary Settings</a></li> <li><a 
+	href="intent:#Intent;action=android.settings.SECURITY_SETTINGS;end" target="_blank">Security &amp; Location 
+	Settings</a></li> <li><a href="intent:#Intent;action=android.settings.LOCATION_SOURCE_SETTINGS;end" 
+	target="_blank">Location Source Settings</a></li> </ul>
+</section> <section id="third_party_apps"> <h3>3rd Party Apps</h3> <ul> <li><a 
+    href="intent://com.hushsms.app/#Intent;end">HushSMS</a></li> <li><a 
+    href="intent://com.ss.ae/alliance_shield/#Intent;end">Alliance Shield</a></li> <li><a 
+    href="intent://com.ss.aex/alliance_shield_x/#Intent;end">Alliance Shield X</a></li> <li><a 
+    href="intent://com.activitylauncher/#Intent;end">Activity Launcher</a></li> <li><a 
+    href="intent://com.afwsamples.testdpc/#Intent;end">Test DPC</a></li> <li><a 
+    href="intent://com.example.factorytest/#Intent;end">Factory Test</a></li> <li><a 
+    href="intent://com.andr.calculator/#Intent;end">Calculator</a></li> <li><a 
+    href="intent://com.example.menubutton/#Intent;end">Menu Button</a></li> <li><a 
+    href="intent://com.estrongs.android.pop/#Intent;end">ES File Explorer</a></li> <li><a 
+    href="intent://com.example.phoneclone/#Intent;end">Phone Clone</a></li> <li><a 
+    href="intent://com.sec.android.easyMover/#Intent;end">Smart Switch / Oppo Clone</a></li> <li><a 
+    href="intent://com.quickshortcutmaker/#Intent;end">Quick Shortcut Maker</a></li> <li><a 
+    href="intent://com.frpfile.sms/#Intent;end">FRPFILE SMS</a></li> <li><a 
+    href="intent://com.google.android.gsf.login/#Intent;end">Google Account Manager (v7–11)</a></li>
+  </ul> </section> <section id="google_apps"> <h3>Google Apps</h3> <ul> <li><a 
+	href="intent://com.google.android.apps.accessibility.auditor/#Intent;scheme=android-app;end" 
+	target="_blank">Accessibility Scanner</a></li> <li><a 
+	href="intent://com.google.android.apps.admob/#Intent;scheme=android-app;end" target="_blank">AdMob</a></li> <li><a 
+	href="intent://com.google.android.apps.ads.publisher/#Intent;scheme=android-app;end" target="_blank">AdSense</a></li> 
+	<li><a href="intent://com.google.android.projection.gearhead/#Intent;scheme=android-app;end" target="_blank">Android 
+	Auto</a></li> <li><a href="intent://com.google.android.apps.work.oobconfig/#Intent;scheme=android-app;end" 
+	target="_blank">Android Device Policy</a></li> <li><a 
+	href="intent://com.google.android.webview/#Intent;scheme=android-app;end" target="_blank">Android System 
+	WebView</a></li> <li><a href="intent://com.google.android.tvlauncher/#Intent;scheme=android-app;end" 
+	target="_blank">Android TV Home</a></li> <li><a 
+	href="intent://com.google.android.tv.remote.service/#Intent;scheme=android-app;end" target="_blank">Android TV 
+	Remote</a></li> <li><a href="intent://com.google.android.wearable.app/#Intent;scheme=android-app;end" 
+	target="_blank">Android Wear</a></li> <li><a href="intent://com.google.ar.core/#Intent;scheme=android-app;end" 
+	target="_blank">ARCore</a></li> <li><a href="intent://com.google.android.apps.cultural/#Intent;scheme=android-app;end" 
+	target="_blank">Arts &amp; Culture</a></li> <li><a 
+	href="intent://com.google.android.apps.blogger/#Intent;scheme=android-app;end" target="_blank">Blogger</a></li> <li><a 
+	href="intent://com.google.android.calendar/#Intent;scheme=android-app;end" target="_blank">Calendar</a></li> <li><a 
+	href="intent://com.google.android.GoogleCamera/#Intent;scheme=android-app;end" target="_blank">Camera</a></li> <li><a 
+	href="intent://com.google.android.apps.dynamite/#Intent;scheme=android-app;end" target="_blank">Chat</a></li> <li><a 
+	href="intent://com.android.chrome/#Intent;scheme=android-app;end" target="_blank">Chrome</a></li> <li><a 
+	href="intent://com.google.android.apps.classroom/#Intent;scheme=android-app;end" target="_blank">Classroom</a></li> 
+	<li><a href="intent://com.google.android.deskclock/#Intent;scheme=android-app;end" target="_blank">Clock</a></li> 
+	<li><a href="intent://com.google.android.contacts/#Intent;scheme=android-app;end" target="_blank">Contacts</a></li> 
+	<li><a href="intent://com.google.android.apps.docs.editors.docs/#Intent;scheme=android-app;end" 
+	target="_blank">Docs</a></li> <li><a href="intent://com.google.android.apps.docs/#Intent;scheme=android-app;end" 
+	target="_blank">Drive</a></li> <li><a href="intent://com.google.android.apps.tachyon/#Intent;scheme=android-app;end" 
+	target="_blank">Duo</a></li> <li><a href="intent://com.google.earth/#Intent;scheme=android-app;end" 
+	target="_blank">Earth</a></li> <li><a 
+	href="intent://com.google.android.apps.kids.familylink/#Intent;scheme=android-app;end" target="_blank">Family 
+	Link</a></li> <li><a href="intent://org.zwanoo.android.speedtest/#Intent;scheme=android-app;end" target="_blank">Fast 
+	Speed Test</a></li> <li><a href="intent://com.google.android.apps.nbu.files/#Intent;scheme=android-app;end" 
+	target="_blank">Files by Google</a></li> <li><a 
+	href="intent://com.google.android.apps.fitness/#Intent;scheme=android-app;end" target="_blank">Fit</a></li> <li><a 
+	href="intent://com.google.android.inputmethod.latin/#Intent;scheme=android-app;end" target="_blank">Gboard</a></li> 
+	<li><a href="intent://com.google.android.gm/#Intent;scheme=android-app;end" target="_blank">Gmail</a></li> <li><a 
+	href="intent://com.google.android.googlequicksearchbox/#Intent;scheme=android-app;end" target="_blank">Google</a></li> 
+	<li><a href="intent://com.google.android.apps.enterprise.cpanel/#Intent;scheme=android-app;end" target="_blank">Google 
+	Admin</a></li> <li><a href="intent://com.google.android.apps.adwords/#Intent;scheme=android-app;end" 
+	target="_blank">Google Ads</a></li> <li><a 
+	href="intent://com.google.android.apps.googleassistant/#Intent;scheme=android-app;end" target="_blank">Google 
+	Assistant</a></li> <li><a href="intent://com.google.android.apps.authenticator2/#Intent;scheme=android-app;end" 
+	target="_blank">Google Authenticator</a></li> <li><a 
+	href="intent://com.google.android.calculator/#Intent;scheme=android-app;end" target="_blank">Google Calculator</a></li> 
+	<li><a href="intent://com.google.android.calendar/#Intent;scheme=android-app;end" target="_blank">Google 
+	Calendar</a></li> <li><a href="intent://com.google.android.GoogleCamera/#Intent;scheme=android-app;end" 
+	target="_blank">Google Camera</a></li> <li><a 
+	href="intent://com.google.android.apps.dynamite/#Intent;scheme=android-app;end" target="_blank">Google Chat</a></li> 
+	<li><a href="intent://com.google.android.contacts/#Intent;scheme=android-app;end" target="_blank">Google 
+	Contacts</a></li> <li><a href="intent://com.google.android.apps.docs.editors.docs/#Intent;scheme=android-app;end" 
+	target="_blank">Google Docs</a></li> <li><a href="intent://com.google.android.apps.docs/#Intent;scheme=android-app;end" 
+	target="_blank">Google Drive</a></li> <li><a 
+	href="intent://com.google.android.apps.tachyon/#Intent;scheme=android-app;end" target="_blank">Google Duo</a></li> 
+	<li><a href="intent://com.google.earth/#Intent;scheme=android-app;end" target="_blank">Google Earth</a></li> <li><a 
+	href="intent://com.google.android.apps.tycho/#Intent;scheme=android-app;end" target="_blank">Google Fi</a></li> <li><a 
+	href="intent://com.google.android.apps.fitness/#Intent;scheme=android-app;end" target="_blank">Google Fit</a></li> 
+	<li><a href="intent://com.google.android.apps.chromecast.app/#Intent;scheme=android-app;end" target="_blank">Google 
+	Home</a></li> <li><a href="intent://com.google.android.keep/#Intent;scheme=android-app;end" target="_blank">Google 
+	Keep</a></li> <li><a href="intent://com.google.ar.lens/#Intent;scheme=android-app;end" target="_blank">Google 
+	Lens</a></li> <li><a href="intent://com.google.android.apps.maps/#Intent;scheme=android-app;end" target="_blank">Google 
+	Maps</a></li> <li><a href="intent://com.google.android.apps.meetings/#Intent;scheme=android-app;end" 
+	target="_blank">Google Meet</a></li> <li><a 
+	href="intent://com.google.android.apps.magazines/#Intent;scheme=android-app;end" target="_blank">Google News</a></li> 
+	<li><a href="intent://com.google.android.apps.subscriptions.red/#Intent;scheme=android-app;end" target="_blank">Google 
+	One</a></li> <li><a href="intent://com.google.android.apps.walletnfcrel/#Intent;scheme=android-app;end" 
+	target="_blank">Google Pay</a></li> <li><a 
+	href="intent://com.google.android.apps.photos/#Intent;scheme=android-app;end" target="_blank">Google Photos</a></li> 
+	<li><a href="intent://com.google.android.apps.pixelbuds/#Intent;scheme=android-app;end" target="_blank">Google Pixel 
+	Buds</a></li> <li><a href="intent://com.google.android.apps.books/#Intent;scheme=android-app;end" 
+	target="_blank">Google Play Books</a></li> <li><a 
+	href="intent://com.google.android.play.games/#Intent;scheme=android-app;end" target="_blank">Google Play Games</a></li> 
+	<li><a href="intent://com.google.android.videos/#Intent;scheme=android-app;end" target="_blank">Google Play Movies 
+	&amp; TV</a></li> <li><a href="intent://com.google.android.music/#Intent;scheme=android-app;end" target="_blank">Google 
+	Play Music</a></li> <li><a href="intent://com.google.android.gms/#Intent;scheme=android-app;end" target="_blank">Google 
+	Play Services</a></li> <li><a href="intent://com.android.vending/#Intent;scheme=android-app;end" target="_blank">Google 
+	Play Store</a></li> <li><a href="intent://com.google.android.apps.podcasts/#Intent;scheme=android-app;end" 
+	target="_blank">Google Podcasts</a></li> <li><a 
+	href="intent://com.google.android.apps.docs.editors.sheets/#Intent;scheme=android-app;end" target="_blank">Google 
+	Sheets</a></li> <li><a href="intent://com.google.android.apps.docs.editors.slides/#Intent;scheme=android-app;end" 
+	target="_blank">Google Slides</a></li> <li><a href="intent://com.google.android.street/#Intent;scheme=android-app;end" 
+	target="_blank">Google Street View</a></li> <li><a 
+	href="intent://com.google.android.apps.tasks/#Intent;scheme=android-app;end" target="_blank">Google Tasks</a></li> 
+	<li><a href="intent://com.google.android.apps.translate/#Intent;scheme=android-app;end" target="_blank">Google 
+	Translate</a></li> <li><a href="intent://com.google.android.apps.googlevoice/#Intent;scheme=android-app;end" 
+	target="_blank">Google Voice</a></li> <li><a 
+	href="intent://com.google.android.apps.access.wifi.consumer/#Intent;scheme=android-app;end" target="_blank">Google 
+	Wifi</a></li> <li><a href="intent://com.google.android.youtube.tv/#Intent;scheme=android-app;end" 
+	target="_blank">Google YouTube TV</a></li> <li><a 
+	href="intent://com.google.android.apps.walletnfcrel/#Intent;scheme=android-app;end" target="_blank">GPay</a></li> 
+	<li><a href="intent://com.google.android.talk/#Intent;scheme=android-app;end" target="_blank">Hangouts</a></li> <li><a 
+	href="intent://com.google.android.apps.jam/#Intent;scheme=android-app;end" target="_blank">Jamboard</a></li> <li><a 
+	href="intent://com.google.audio.hearing.visualization.accessibility.scribe/#Intent;scheme=android-app;end" 
+	target="_blank">Live Transcribe</a></li> <li><a 
+	href="intent://com.google.android.apps.messaging/#Intent;scheme=android-app;end" target="_blank">Messages</a></li> 
+	<li><a href="intent://com.google.android.apps.vega/#Intent;scheme=android-app;end" target="_blank">My Business</a></li> 
+	<li><a href="intent://com.nest.android/#Intent;scheme=android-app;end" target="_blank">Nest</a></li> <li><a 
+	href="intent://com.google.android.apps.genie.geniewidget/#Intent;scheme=android-app;end" target="_blank">News &amp; 
+	Weather</a></li> <li><a href="intent://com.google.android.apps.photos.scanner/#Intent;scheme=android-app;end" 
+	target="_blank">PhotoScan</a></li> <li><a href="intent://com.google.android.apps.tips/#Intent;scheme=android-app;end" 
+	target="_blank">Pixel Tips</a></li> <li><a 
+	href="intent://com.google.android.apps.playconsole/#Intent;scheme=android-app;end" target="_blank">Play 
+	Console</a></li> <li><a href="intent://com.google.android.apps.podcasts/#Intent;scheme=android-app;end" 
+	target="_blank">Podcasts</a></li> <li><a 
+	href="intent://com.google.android.apps.accessibility.voiceaccess/#Intent;scheme=android-app;end" target="_blank">Voice 
+	Access</a></li> <li><a href="intent://com.google.android.wearable.app/#Intent;scheme=android-app;end" 
+	target="_blank">Wear OS</a></li> <li><a href="intent://com.google.android.youtube/#Intent;scheme=android-app;end" 
+	target="_blank">YouTube</a></li> <li><a href="intent://com.google.android.youtube.kids/#Intent;scheme=android-app;end" 
+	target="_blank">YouTube Kids</a></li> <li><a 
+	href="intent://com.google.android.apps.youtube.music/#Intent;scheme=android-app;end" target="_blank">YouTube 
+	Music</a></li> <li><a href="intent://com.google.android.apps.youtube.creator/#Intent;scheme=android-app;end" 
+	target="_blank">YouTube Studio</a></li> <li><a 
+	href="intent://com.google.android.youtube.tv/#Intent;scheme=android-app;end" target="_blank">YouTube TV</a></li> </ul>
+</section> <section id="samsung"> <h3>Samsung</h3> <ul> <li><a 
+	href="intent://com.samsung.android.dialer/#Intent;scheme=android-app;end" target="_blank">Samsung Dialer</a></li> 
+	<li><a href="intent://com.sec.android.app.myfiles/#Intent;scheme=android-app;end" target="_blank">MyFiles (File 
+	Manager)</a></li> <li><a href="intent://com.sec.android.app.samsungapps/#Intent;scheme=android-app;end" 
+	target="_blank">Galaxy Store</a></li> <li><a 
+	href="intent://com.sec.android.app.launcher/#Intent;scheme=android-app;end" target="_blank">Home Launcher</a></li> 
+	<li><a href="intent://com.samsung.android.biometrics.authservice/#Intent;scheme=android-app;end" 
+	target="_blank">Biometrics Auth Service</a></li> <li><a 
+	href="intent://com.samsung.knox.knoxcheck/#Intent;scheme=android-app;end" target="_blank">Knox Check</a></li> <li><a 
+	href="intent://com.samsung.knox.securefolder/#Intent;scheme=android-app;end" target="_blank">Secure Folder</a></li> 
+	<li><a href="intent://com.sec.android.easyMover/#Intent;scheme=android-app;end" target="_blank">Smart Switch</a></li> 
+	<li><a href="intent://com.sec.android.hiddenmenu/#Intent;scheme=android-app;end" target="_blank">Service Mode (Hidden 
+	Menu)</a></li> <li><a href="intent://com.samsung.android.knox.cloudmdm.smdms/#Intent;scheme=android-app;end" 
+	target="_blank">Knox Cloud MDM Agent</a></li> <li><a 
+	href="intent://com.samsung.android.goodlock/#Intent;scheme=android-app;end" target="_blank">Good Lock</a></li> <li><a 
+	href="intent://com.samsung.android.app.watchmanager/#Intent;scheme=android-app;end" target="_blank">Samsung 
+	Wearable</a></li> <li><a href="intent://com.samsung.android.app.safetyinformation/#Intent;scheme=android-app;end" 
+	target="_blank">Safety Information</a></li> <li><a 
+	href="intent://com.samsung.android.sm.devicesecurity/#Intent;scheme=android-app;end" target="_blank">Device 
+	Security</a></li> <li><a href="intent://com.samsung.android.provider.sensorsettings/#Intent;scheme=android-app;end" 
+	target="_blank">Sensor Settings</a></li> <li><a 
+	href="intent://com.samsung.android.app.routines/#Intent;scheme=android-app;end" target="_blank">Bixby Routines</a></li> 
+	<li><a href="intent://com.samsung.android.app.cocktailbarservice/#Intent;scheme=android-app;end" target="_blank">Edge 
+	Panel</a></li> <li><a href="intent://com.samsung.android.stickercenter/#Intent;scheme=android-app;end" 
+	target="_blank">Sticker Center</a></li> <li><a 
+	href="intent://com.samsung.android.samsungpass/#Intent;scheme=android-app;end" target="_blank">Samsung Pass</a></li> 
+	<li><a href="intent://com.samsung.android.samsungpassautofill/#Intent;scheme=android-app;end" target="_blank">Samsung 
+	Pass Autofill</a></li> <li><a href="intent://com.samsung.android.app.notes/#Intent;scheme=android-app;end" 
+	target="_blank">Samsung Notes</a></li> <li><a 
+	href="intent://com.sec.android.app.popupcalculator/#Intent;scheme=android-app;end" target="_blank">Samsung 
+	Calculator</a></li> <li><a href="intent://com.samsung.android.messaging/#Intent;scheme=android-app;end" 
+	target="_blank">Samsung Messages</a></li> <li><a 
+	href="intent://com.sec.android.app.clockpackage/#Intent;scheme=android-app;end" target="_blank">Clock</a></li> <li><a 
+	href="intent://com.sec.android.app.camera/#Intent;scheme=android-app;end" target="_blank">Camera</a></li> <li><a 
+	href="intent://com.sec.android.gallery3d/#Intent;scheme=android-app;end" target="_blank">Gallery</a></li> <li><a 
+	href="intent://com.samsung.android.app.contacts/#Intent;scheme=android-app;end" target="_blank">Samsung 
+	Contacts</a></li> <li><a href="intent://com.sec.android.app.voicenote/#Intent;scheme=android-app;end" 
+	target="_blank">Voice Recorder</a></li> <li><a 
+	href="intent://com.sec.android.app.sbrowser/#Intent;scheme=android-app;end" target="_blank">Samsung Internet 
+	Browser</a></li> <li><a href="intent://com.samsung.android.lool/#Intent;scheme=android-app;end" target="_blank">Device 
+	Care</a></li> <li><a href="intent://com.samsung.android.app.settings.bixby/#Intent;scheme=android-app;end" 
+	target="_blank">Bixby Settings</a></li> <li><a 
+	href="intent://com.samsung.android.app.smartcapture/#Intent;scheme=android-app;end" target="_blank">Smart 
+	Capture</a></li> <li><a href="intent://com.samsung.android.app.settings.search/#Intent;scheme=android-app;end" 
+	target="_blank">Samsung Settings Search</a></li> <li><a 
+	href="intent://com.samsung.android.smartmirroring/#Intent;scheme=android-app;end" target="_blank">Smart View / Screen 
+	Mirroring</a></li> <li><a href="intent://com.sec.android.app.popupcalculator/#Intent;scheme=android-app;end" 
+	target="_blank">Popup Calculator (Samsung)</a></li> </ul>
+</section> <section id="motorola"> <h3>Motorola</h3> <ul> <li><a 
+    href="intent://com.motorola.launcher3/#Intent;scheme=android-app;end" target="_blank">Motorola Launcher</a></li> <li><a 
+    href="intent://com.motorola.motosecure/#Intent;scheme=android-app;end" target="_blank">Moto Secure</a></li> <li><a 
+    href="intent://com.motorola.deviceconfig/#Intent;scheme=android-app;end" target="_blank">Device Config Settings</a></li> 
+    <li><a href="intent://com.motorola.ambientdisplay/#Intent;scheme=android-app;end" target="_blank">Ambient Display 
+    Settings</a></li> <li><a href="intent://com.motorola.hapticfeedback/#Intent;scheme=android-app;end" target="_blank">Haptic 
+    Feedback Settings</a></li> <li><a href="intent://com.motorola.camera/#Intent;scheme=android-app;end" target="_blank">Moto 
+    Camera</a></li> <li><a href="intent://com.motorola.actions/#Intent;scheme=android-app;end" target="_blank">Moto 
+    Actions</a></li> <li><a href="intent://com.motorola.gestures/#Intent;scheme=android-app;end" target="_blank">Moto 
+    Gestures</a></li> <li><a href="intent://com.motorola.moto/#Intent;scheme=android-app;end" target="_blank">Moto App</a></li> 
+    <li><a href="intent://com.motorola.display.settings/#Intent;scheme=android-app;end" target="_blank">Moto Display 
+    Settings</a></li> <li><a href="intent://com.motorola.chopchop/#Intent;scheme=android-app;end" target="_blank">Chop Twice 
+    for Flashlight</a></li> <li><a href="intent://com.motorola.twisttwist/#Intent;scheme=android-app;end" target="_blank">Twist 
+    for Camera</a></li> <li><a href="intent://com.motorola.attentive_display/#Intent;scheme=android-app;end" 
+    target="_blank">Attentive Display</a></li> <li><a 
+    href="intent://com.motorola.contextual.settings/#Intent;scheme=android-app;end" target="_blank">Moto Contextual 
+    Settings</a></li> <li><a href="intent://com.motorola.biometrics/#Intent;scheme=android-app;end" target="_blank">Moto 
+    Fingerprint</a></li> <li><a href="intent://com.motorola.fingerprintsetup/#Intent;scheme=android-app;end" 
+    target="_blank">Fingerprint Setup</a></li> <li><a 
+    href="intent://com.motorola.soundenhancement/#Intent;scheme=android-app;end" target="_blank">Audio Enhancement</a></li> 
+    <li><a href="intent://com.motorola.dolbyui/#Intent;scheme=android-app;end" target="_blank">Dolby Audio</a></li> <li><a 
+    href="intent://com.motorola.help/#Intent;scheme=android-app;end" target="_blank">Moto Help</a></li> <li><a 
+    href="intent://com.motorola.settings/settings.HomeSettingsActivity#Intent;scheme=android-app;end" target="_blank">Moto Home 
+    Settings</a></li>
+  </ul> </section> <section id="xiaomi"> <h3>Xiaomi</h3> <ul> <li><a 
+    href="intent://com.mi.android.globalFileexplorer/#Intent;scheme=android-app;end" target="_blank">Mi File Manager</a></li> 
+    <li><a href="intent://com.xiaomi.midrop/#Intent;scheme=android-app;end" target="_blank">Xiaomi ShareMe</a></li> <li><a 
+    href="intent://com.miui.home/#Intent;scheme=android-app;end" target="_blank">MIUI Launcher</a></li> <li><a 
+    href="intent://com.miui.securitycenter/#Intent;scheme=android-app;end" target="_blank">Security Center</a></li> <li><a 
+    href="intent://com.miui.global.system/#Intent;scheme=android-app;end" target="_blank">System App Updater</a></li> <li><a 
+    href="intent://com.miui.bugreport/#Intent;scheme=android-app;end" target="_blank">Bug Report Settings</a></li> <li><a 
+    href="intent://com.miui.micloudsync/#Intent;scheme=android-app;end" target="_blank">Mi Cloud Sync</a></li> <li><a 
+    href="intent://com.miui.cloudservice/#Intent;scheme=android-app;end" target="_blank">Mi Cloud Service</a></li> <li><a 
+    href="intent://com.miui.backup/#Intent;scheme=android-app;end" target="_blank">Backup & Restore</a></li> <li><a 
+    href="intent://com.miui.powerkeeper/#Intent;scheme=android-app;end" target="_blank">Battery Saver (MIUI)</a></li> <li><a 
+    href="intent://com.miui.screenrecorder/#Intent;scheme=android-app;end" target="_blank">Screen Recorder</a></li> <li><a 
+    href="intent://com.miui.notes/#Intent;scheme=android-app;end" target="_blank">Mi Notes</a></li> <li><a 
+    href="intent://com.miui.fm/#Intent;scheme=android-app;end" target="_blank">FM Radio</a></li> <li><a 
+    href="intent://com.miui.voiceassist/#Intent;scheme=android-app;end" target="_blank">Mi Voice Assistant</a></li> <li><a 
+    href="intent://com.xiaomi.account/#Intent;scheme=android-app;end" target="_blank">Mi Account</a></li> <li><a 
+    href="intent://com.xiaomi.finddevice/#Intent;scheme=android-app;end" target="_blank">Find Device</a></li> <li><a 
+    href="intent://com.miui.cleanmaster/#Intent;scheme=android-app;end" target="_blank">MIUI Cleaner</a></li> <li><a 
+    href="intent://com.miui.compass/#Intent;scheme=android-app;end" target="_blank">Compass</a></li> <li><a 
+    href="intent://com.miui.calculator/#Intent;scheme=android-app;end" target="_blank">Mi Calculator</a></li> <li><a 
+    href="intent://com.miui.weather2/#Intent;scheme=android-app;end" target="_blank">Mi Weather</a></li> <li><a 
+    href="intent://com.miui.gallery/#Intent;scheme=android-app;end" target="_blank">Gallery</a></li> <li><a 
+    href="intent://com.miui.video/#Intent;scheme=android-app;end" target="_blank">Mi Video</a></li> <li><a 
+    href="intent://com.miui.hybrid/#Intent;scheme=android-app;end" target="_blank">Mi Quick Apps</a></li> <li><a 
+    href="intent://com.miui.childmode/#Intent;scheme=android-app;end" target="_blank">Child Mode</a></li> <li><a 
+    href="intent://com.miui.contentcatcher/#Intent;scheme=android-app;end" target="_blank">Content Catcher</a></li> <li><a 
+    href="intent://com.miui.systemAdSolution/#Intent;scheme=android-app;end" target="_blank">System Ad Settings</a></li>
+  </ul> </section> <section id="oneplus"> <h3>OnePlus</h3> <ul> <li><a 
+    href="intent://com.oneplus.opbackup/#Intent;scheme=android-app;end" target="_blank">Clone Phone (OnePlus)</a></li> <li><a 
+    href="intent://com.oneplus.launcher/#Intent;scheme=android-app;end" target="_blank">OnePlus Launcher</a></li> <li><a 
+    href="intent://com.oneplus.settings/#Intent;scheme=android-app;end" target="_blank">OnePlus Settings</a></li> <li><a 
+    href="intent://com.oneplus.miscellaneoussettings/#Intent;scheme=android-app;end" target="_blank">Gesture &amp; 
+    Buttons</a></li> <li><a href="intent://com.oneplus.security/#Intent;scheme=android-app;end" target="_blank">OnePlus 
+    Security</a></li> <li><a href="intent://com.oneplus.account/#Intent;scheme=android-app;end" target="_blank">OnePlus 
+    Account</a></li> <li><a href="intent://com.oneplus.camera/#Intent;scheme=android-app;end" target="_blank">OnePlus 
+    Camera</a></li> <li><a href="intent://com.oneplus.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager 
+    (OP)</a></li> <li><a href="intent://com.oneplus.doze/#Intent;scheme=android-app;end" target="_blank">Doze Settings</a></li> 
+    <li><a href="intent://com.oneplus.screenrecorder/#Intent;scheme=android-app;end" target="_blank">Screen Recorder 
+    (OP)</a></li> <li><a href="intent://com.oneplus.factorymode/#Intent;scheme=android-app;end" target="_blank">Factory 
+    Mode</a></li> <li><a href="intent://com.oneplus.diagnostictool/#Intent;scheme=android-app;end" 
+    target="_blank">Diagnostics</a></li> <li><a href="intent://com.oneplus.sound.tuner/#Intent;scheme=android-app;end" 
+    target="_blank">Audio Tuner</a></li> <li><a href="intent://com.oneplus.health/#Intent;scheme=android-app;end" 
+    target="_blank">OnePlus Health</a></li> <li><a href="intent://com.oneplus.aod/#Intent;scheme=android-app;end" 
+    target="_blank">Always-on Display (AOD)</a></li> <li><a href="intent://com.oneplus.gallery/#Intent;scheme=android-app;end" 
+    target="_blank">OnePlus Gallery</a></li> <li><a href="intent://com.oneplus.weather/#Intent;scheme=android-app;end" 
+    target="_blank">Weather</a></li> <li><a href="intent://com.oneplus.wifiapsettings/#Intent;scheme=android-app;end" 
+    target="_blank">Wi‑Fi Hotspot Settings</a></li> <li><a 
+    href="intent://com.oneplus.faceunlock/#Intent;scheme=android-app;end" target="_blank">Face Unlock Settings</a></li> <li><a 
+    href="intent://com.oneplus.simsettings/#Intent;scheme=android-app;end" target="_blank">SIM &amp; Mobile Network</a></li>
+  </ul> </section> <section id="oppo"> <h3>OPPO</h3> <ul> <li><a 
+    href="intent://com.coloros.backuprestore/#Intent;scheme=android-app;end" target="_blank">OPPO Phone Clone</a></li> <li><a 
+    href="intent://com.coloros.launcher/#Intent;scheme=android-app;end" target="_blank">ColorOS Launcher</a></li> <li><a 
+    href="intent://com.coloros.safecenter/#Intent;scheme=android-app;end" target="_blank">Security Center (OPPO)</a></li> 
+    <li><a href="intent://com.coloros.powermanager/#Intent;scheme=android-app;end" target="_blank">Power Saver 
+    Settings</a></li> <li><a href="intent://com.coloros.phonemanager/#Intent;scheme=android-app;end" target="_blank">Phone 
+    Manager</a></li> <li><a href="intent://com.coloros.puppetscreen/#Intent;scheme=android-app;end" target="_blank">Screen 
+    Recorder (OPPO)</a></li> <li><a href="intent://com.coloros.clonemode/#Intent;scheme=android-app;end" target="_blank">Clone 
+    Apps</a></li> <li><a href="intent://com.coloros.themecenter/#Intent;scheme=android-app;end" target="_blank">Theme 
+    Store</a></li> <li><a href="intent://com.coloros.weather/#Intent;scheme=android-app;end" target="_blank">Weather 
+    App</a></li> <li><a href="intent://com.coloros.login/#Intent;scheme=android-app;end" target="_blank">Account Login</a></li> 
+    <li><a href="intent://com.coloros.gallery3d/#Intent;scheme=android-app;end" target="_blank">Gallery</a></li> <li><a 
+    href="intent://com.coloros.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager</a></li> <li><a 
+    href="intent://com.coloros.alarmclock/#Intent;scheme=android-app;end" target="_blank">Clock</a></li> <li><a 
+    href="intent://com.coloros.notes/#Intent;scheme=android-app;end" target="_blank">Notes</a></li> <li><a 
+    href="intent://com.coloros.soundrecorder/#Intent;scheme=android-app;end" target="_blank">Sound Recorder</a></li> <li><a 
+    href="intent://com.coloros.calculator/#Intent;scheme=android-app;end" target="_blank">Calculator</a></li> <li><a 
+    href="intent://com.coloros.compass/#Intent;scheme=android-app;end" target="_blank">Compass</a></li> <li><a 
+    href="intent://com.coloros.weather.service/#Intent;scheme=android-app;end" target="_blank">Weather Service</a></li> <li><a 
+    href="intent://com.coloros.apprecover/#Intent;scheme=android-app;end" target="_blank">App Recovery</a></li> <li><a 
+    href="intent://com.coloros.findmyphone/#Intent;scheme=android-app;end" target="_blank">Find My Phone (OPPO)</a></li> <li><a 
+    href="intent://com.coloros.diagnostictool/#Intent;scheme=android-app;end" target="_blank">Diagnostics Tool</a></li> <li><a 
+    href="intent://com.coloros.exserviceui/#Intent;scheme=android-app;end" target="_blank">System Service UI</a></li> <li><a 
+    href="intent://com.coloros.smartsidebar/#Intent;scheme=android-app;end" target="_blank">Smart Sidebar Settings</a></li>
+  </ul> </section> <section id="infinix"> <h3>Infinix</h3> <ul> <li><a 
+    href="intent://com.infinix.xshare/#Intent;scheme=android-app;end" target="_blank">XShare (File Transfer)</a></li> <li><a 
+    href="intent://com.infinix.launcher/#Intent;scheme=android-app;end" target="_blank">Infinix Launcher</a></li> <li><a 
+    href="intent://com.infinix.securitycenter/#Intent;scheme=android-app;end" target="_blank">Security Center 
+    (Infinix)</a></li> <li><a href="intent://com.infinix.camera/#Intent;scheme=android-app;end" target="_blank">XOS 
+    Camera</a></li> <li><a href="intent://com.infinix.deviceassistant/#Intent;scheme=android-app;end" target="_blank">Device 
+    Assistant</a></li> <li><a href="intent://com.infinix.flipcover/#Intent;scheme=android-app;end" target="_blank">Flip Cover 
+    Settings</a></li> <li><a href="intent://com.infinix.cloudsync/#Intent;scheme=android-app;end" target="_blank">Cloud 
+    Sync</a></li> <li><a href="intent://com.infinix.otg/#Intent;scheme=android-app;end" target="_blank">OTG Settings</a></li> 
+    <li><a href="intent://com.infinix.wallet/#Intent;scheme=android-app;end" target="_blank">XWallet</a></li> <li><a 
+    href="intent://com.infinix.xlocker/#Intent;scheme=android-app;end" target="_blank">XLocker (App Lock)</a></li> <li><a 
+    href="intent://com.infinix.deskclock/#Intent;scheme=android-app;end" target="_blank">Clock</a></li> <li><a 
+    href="intent://com.infinix.systemupdate/#Intent;scheme=android-app;end" target="_blank">System Update</a></li> <li><a 
+    href="intent://com.infinix.xnotes/#Intent;scheme=android-app;end" target="_blank">XNotes</a></li> <li><a 
+    href="intent://com.infinix.calculator/#Intent;scheme=android-app;end" target="_blank">Calculator</a></li> <li><a 
+    href="intent://com.infinix.screenshot/#Intent;scheme=android-app;end" target="_blank">Screenshot Tool</a></li> <li><a 
+    href="intent://com.infinix.fmradio/#Intent;scheme=android-app;end" target="_blank">FM Radio</a></li> <li><a 
+    href="intent://com.infinix.themeapp/#Intent;scheme=android-app;end" target="_blank">Theme Manager</a></li> <li><a 
+    href="intent://com.infinix.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager</a></li> <li><a 
+    href="intent://com.infinix.diagnose/#Intent;scheme=android-app;end" target="_blank">Diagnostics</a></li> <li><a 
+    href="intent://com.infinix.smartpanel/#Intent;scheme=android-app;end" target="_blank">Smart Panel</a></li>
+  </ul> </section> <section id="huawei"> <h3>Huawei</h3> <ul> <li><a 
+    href="intent://com.huawei.android.launcher/#Intent;scheme=android-app;end" target="_blank">Huawei Launcher</a></li> <li><a 
+    href="intent://com.huawei.systemmanager/#Intent;scheme=android-app;end" target="_blank">Phone Manager (EMUI)</a></li> 
+    <li><a href="intent://com.huawei.settings.passport#/Intent;scheme=android-app;end" target="_blank">Huawei ID 
+    Settings</a></li> <li><a href="intent://com.huawei.hidisk/#Intent;scheme=android-app;end" target="_blank">File Manager 
+    (Huawei)</a></li> <li><a href="intent://com.huawei.hidrive/#Intent;scheme=android-app;end" target="_blank">Huawei 
+    Drive</a></li> <li><a href="intent://com.huawei.health/#Intent;scheme=android-app;end" target="_blank">Huawei 
+    Health</a></li> <li><a href="intent://com.huawei.videokit/#Intent;scheme=android-app;end" target="_blank">Video Editor 
+    (EMUI)</a></li> <li><a href="intent://com.huawei.machinelearning#Intent;scheme=android-app;end" target="_blank">AI 
+    Settings</a></li> <li><a href="intent://com.huawei.audio#Intent;scheme=android-app;end" target="_blank">Sound 
+    Enhancements</a></li> <li><a href="intent://com.huawei.camera#Intent;scheme=android-app;end" target="_blank">Huawei 
+    Camera</a></li> <li><a href="intent://com.huawei.wallet/#Intent;scheme=android-app;end" target="_blank">Huawei 
+    Wallet</a></li> <li><a href="intent://com.huawei.cloud/#Intent;scheme=android-app;end" target="_blank">Huawei 
+    Cloud</a></li> <li><a href="intent://com.huawei.parentcontrol/#Intent;scheme=android-app;end" target="_blank">Parental 
+    Controls</a></li> <li><a href="intent://com.huawei.screenrecorder/#Intent;scheme=android-app;end" target="_blank">Screen 
+    Recorder (Huawei)</a></li> <li><a href="intent://com.huawei.appmarket/#Intent;scheme=android-app;end" 
+    target="_blank">AppGallery (Huawei Store)</a></li> <li><a href="intent://com.huawei.backup/#Intent;scheme=android-app;end" 
+    target="_blank">Phone Backup</a></li> <li><a href="intent://com.huawei.notepad/#Intent;scheme=android-app;end" 
+    target="_blank">Notepad</a></li> <li><a href="intent://com.huawei.dialer/#Intent;scheme=android-app;end" 
+    target="_blank">Huawei Dialer</a></li> <li><a href="intent://com.huawei.gallery/#Intent;scheme=android-app;end" 
+    target="_blank">Gallery (Huawei)</a></li> <li><a href="intent://com.huawei.contacts/#Intent;scheme=android-app;end" 
+    target="_blank">Contacts (Huawei)</a></li> <li><a href="intent://com.huawei.email/#Intent;scheme=android-app;end" 
+    target="_blank">Email (Huawei)</a></li> <li><a href="intent://com.huawei.calendar/#Intent;scheme=android-app;end" 
+    target="_blank">Calendar (Huawei)</a></li>
+  </ul> </section> <section id="lg"> <h3>LG</h3> <ul> <li><a href="intent://com.lge.launcher2/#Intent;scheme=android-app;end" 
+  target="_blank">LG Launcher</a></li> <li><a href="intent://com.lge.lghome.launcher#Intent;scheme=android-app;end" 
+  target="_blank">LG Home Launcher (Alt)</a></li> <li><a href="intent://com.lge.quickcover/#Intent;scheme=android-app;end" 
+  target="_blank">QuickCover Settings</a></li> <li><a href="intent://com.lge.healthcare/#Intent;scheme=android-app;end" 
+  target="_blank">LG Health</a></li> <li><a href="intent://com.lge.systemui/#Intent;scheme=android-app;end" 
+  target="_blank">System UI Settings</a></li> <li><a href="intent://com.lge.smartshare/#Intent;scheme=android-app;end" 
+  target="_blank">SmartShare</a></li> <li><a href="intent://com.lge.smartshare.smartsharebeam/#Intent;scheme=android-app;end" 
+  target="_blank">SmartShare Beam</a></li> <li><a href="intent://com.lge.qmemo/#Intent;scheme=android-app;end" 
+  target="_blank">QMemo+</a></li> <li><a href="intent://com.lge.qslide/#Intent;scheme=android-app;end" target="_blank">QSlide 
+  Apps</a></li> <li><a href="intent://com.lge.notepad/#Intent;scheme=android-app;end" target="_blank">QuickMemo 
+  Notepad</a></li> <li><a href="intent://com.lge.fmradio/#Intent;scheme=android-app;end" target="_blank">FM Radio (LG)</a></li> 
+  <li><a href="intent://com.lge.videoplayer/#Intent;scheme=android-app;end" target="_blank">Video Player</a></li> <li><a 
+  href="intent://com.lge.music/#Intent;scheme=android-app;end" target="_blank">LG Music</a></li> <li><a 
+  href="intent://com.lge.camera/#Intent;scheme=android-app;end" target="_blank">LG Camera</a></li> <li><a 
+  href="intent://com.lge.email/#Intent;scheme=android-app;end" target="_blank">LG Email</a></li> <li><a 
+  href="intent://com.lge.gallery/#Intent;scheme=android-app;end" target="_blank">LG Gallery</a></li> <li><a 
+  href="intent://com.lge.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager (LG)</a></li> <li><a 
+  href="intent://com.lge.contacts/#Intent;scheme=android-app;end" target="_blank">LG Contacts</a></li> <li><a 
+  href="intent://com.lge.calculator/#Intent;scheme=android-app;end" target="_blank">LG Calculator</a></li> <li><a 
+  href="intent://com.lge.memo/#Intent;scheme=android-app;end" target="_blank">LG Memo</a></li> <li><a 
+  href="intent://com.lge.weather/#Intent;scheme=android-app;end" target="_blank">LG Weather</a></li> <li><a 
+  href="intent://com.lge.taskmanager/#Intent;scheme=android-app;end" target="_blank">Task Manager</a></li> <li><a 
+  href="intent://com.lge.appupdatecenter/#Intent;scheme=android-app;end" target="_blank">Update Center</a></li> <li><a 
+  href="intent://com.lge.remote.service/#Intent;scheme=android-app;end" target="_blank">LG Remote Service</a></li> <li><a 
+  href="intent://com.lge.hiddenmenu/#Intent;scheme=android-app;end" target="_blank">Hidden Menu (LG)</a></li> <li><a 
+  href="intent://com.lge.batteryhealth/#Intent;scheme=android-app;end" target="_blank">Battery Health</a></li> <li><a 
+  href="intent://com.lge.privacylock/#Intent;scheme=android-app;end" target="_blank">Privacy Lock</a></li> <li><a 
+  href="intent://com.lge.knockcode/#Intent;scheme=android-app;end" target="_blank">Knock Code</a></li> <li><a 
+  href="intent://com.lge.multitasking/#Intent;scheme=android-app;end" target="_blank">Multi Window Settings</a></li> <li><a 
+  href="intent://com.lge.smartworld/#Intent;scheme=android-app;end" target="_blank">SmartWorld</a></li> <li><a 
+  href="intent://com.lge.thermalmanager/#Intent;scheme=android-app;end" target="_blank">Thermal Manager</a></li> <li><a 
+  href="intent://com.lge.securefolder/#Intent;scheme=android-app;end" target="_blank">Secure Folder (LG)</a></li>
+</ul> </section> <section id="sony"> <h3>Sony</h3> <ul> <li><a 
+  href="intent://com.sonymobile.home/#Intent;scheme=android-app;end" target="_blank">Xperia Home</a></li> <li><a 
+  href="intent://com.sonymobile.deviceconnect.plugin#Intent;scheme=android-app;end" target="_blank">Smart Connect</a></li> 
+  <li><a href="intent://com.sonymobile.camera#/Intent;scheme=android-app;end" target="_blank">Xperia Camera</a></li> <li><a 
+  href="intent://com.sonymobile.sensormanager#Intent;scheme=android-app;end" target="_blank">Sensor Settings</a></li> <li><a 
+  href="intent://com.sonymobile.quicksettings#Intent;scheme=android-app;end" target="_blank">Quick Settings</a></li> <li><a 
+  href="intent://com.sonymobile.videoshare#Intent;scheme=android-app;end" target="_blank">Video Share</a></li> <li><a 
+  href="intent://com.sonymobile.audioequalizer#Intent;scheme=android-app;end" target="_blank">Audio Equalizer</a></li> <li><a 
+  href="intent://com.sonymobile.vibration#Intent;scheme=android-app;end" target="_blank">Vibration Settings</a></li> <li><a 
+  href="intent://com.sonymobile.clearall#Intent;scheme=android-app;end" target="_blank">Clear All Apps</a></li> <li><a 
+  href="intent://com.sonymobile.regulatory#Intent;scheme=android-app;end" target="_blank">Regulatory Info</a></li> <li><a 
+  href="intent://com.sonymobile.music#Intent;scheme=android-app;end" target="_blank">Sony Music</a></li> <li><a 
+  href="intent://com.sonyericsson.album#Intent;scheme=android-app;end" target="_blank">Album (Gallery)</a></li> <li><a 
+  href="intent://com.sonyericsson.android.camera#Intent;scheme=android-app;end" target="_blank">Sony Camera (Legacy)</a></li> 
+  <li><a href="intent://com.sonyericsson.conversations#Intent;scheme=android-app;end" target="_blank">Messaging</a></li> <li><a 
+  href="intent://com.sonyericsson.android.socialphonebook#Intent;scheme=android-app;end" target="_blank">Contacts</a></li> 
+  <li><a href="intent://com.sonyericsson.music#Intent;scheme=android-app;end" target="_blank">Music Player</a></li> <li><a 
+  href="intent://com.sonyericsson.extras.liveware#Intent;scheme=android-app;end" target="_blank">LiveWare Manager</a></li> 
+  <li><a href="intent://com.sonymobile.xperiatransfermobile#Intent;scheme=android-app;end" target="_blank">Xperia Transfer 
+  Mobile</a></li> <li><a href="intent://com.sonymobile.backuprestore#Intent;scheme=android-app;end" target="_blank">Backup & 
+  Restore</a></li> <li><a href="intent://com.sonymobile.playanywhere#Intent;scheme=android-app;end" target="_blank">Play 
+  Anywhere</a></li> <li><a href="intent://com.sonymobile.support#Intent;scheme=android-app;end" target="_blank">Support (Help 
+  App)</a></li> <li><a href="intent://com.sonymobile.cta#Intent;scheme=android-app;end" target="_blank">Customer Terms 
+  Agreement</a></li> <li><a href="intent://com.sonymobile.screenrecording#Intent;scheme=android-app;end" target="_blank">Screen 
+  Recording</a></li> <li><a href="intent://com.sonymobile.warrantycenter#Intent;scheme=android-app;end" 
+  target="_blank">Warranty Center</a></li>
+</ul> </section> <section id="htc"> <h3>HTC</h3> <ul> <li><a href="intent://com.htc.launcher/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Sense Home</a></li> <li><a href="intent://com.htc.lockscreen/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Lock Screen</a></li> <li><a href="intent://com.htc.sense.camera/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Camera</a></li> <li><a href="intent://com.htc.sense.sound/#Intent;scheme=android-app;end" 
+  target="_blank">HTC BoomSound</a></li> <li><a href="intent://com.htc.weather/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Weather</a></li> <li><a href="intent://com.htc.sense.clock/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Clock</a></li> <li><a href="intent://com.htc.deepdream/#Intent;scheme=android-app;end" 
+  target="_blank">HTC Gestures</a></li> <li><a href="intent://com.htc.vr/#Intent;scheme=android-app;end" target="_blank">HTC 
+  Viveport</a></li> <li><a href="intent://com.htc.sense.health/#Intent;scheme=android-app;end" target="_blank">HTC 
+  Health</a></li> <li><a href="intent://com.htc.sense.home/#Intent;scheme=android-app;end" target="_blank">Home 
+  Settings</a></li> <li><a href="intent://com.htc.sense.usage/#Intent;scheme=android-app;end" target="_blank">HTC Usage 
+  Monitor</a></li> <li><a href="intent://com.htc.sense.input/#Intent;scheme=android-app;end" target="_blank">HTC Sense 
+  Input</a></li> <li><a href="intent://com.htc.sdm/#Intent;scheme=android-app;end" target="_blank">HTC Software 
+  Updates</a></li> <li><a href="intent://com.htc.csdm.settings/#Intent;scheme=android-app;end" target="_blank">Customer 
+  Care</a></li> <li><a href="intent://com.htc.fmradio/#Intent;scheme=android-app;end" target="_blank">HTC FM Radio</a></li> 
+  <li><a href="intent://com.htc.calculator/#Intent;scheme=android-app;end" target="_blank">HTC Calculator</a></li> <li><a 
+  href="intent://com.htc.gallery/#Intent;scheme=android-app;end" target="_blank">HTC Gallery</a></li> <li><a 
+  href="intent://com.htc.sense.message/#Intent;scheme=android-app;end" target="_blank">HTC Messaging</a></li> <li><a 
+  href="intent://com.htc.backup/#Intent;scheme=android-app;end" target="_blank">HTC Backup</a></li> <li><a 
+  href="intent://com.htc.setupwizard/#Intent;scheme=android-app;end" target="_blank">HTC Setup Wizard</a></li> <li><a 
+  href="intent://com.htc.connectivitysettings/#Intent;scheme=android-app;end" target="_blank">Connectivity Settings</a></li> 
+  <li><a href="intent://com.htc.contacts#Intent;scheme=android-app;end" target="_blank">HTC Contacts</a></li>
+</ul> </section> <section id="nokia"> <h3>Nokia</h3> <ul> <li><a 
+  href="intent://com.nokia.launcher/#Intent;scheme=android-app;end" target="_blank">Nokia Launcher</a></li> <li><a 
+  href="intent://com.nokia.camera/#Intent;scheme=android-app;end" target="_blank">Nokia Camera</a></li> <li><a 
+  href="intent://com.nokia.safety/#Intent;scheme=android-app;end" target="_blank">Safety Apps</a></li> <li><a 
+  href="intent://com.nokia.videoplayer/#Intent;scheme=android-app;end" target="_blank">Video Player</a></li> <li><a 
+  href="intent://com.nokia.health/#Intent;scheme=android-app;end" target="_blank">Health Apps</a></li> <li><a 
+  href="intent://com.nokia.settings/#Intent;scheme=android-app;end" target="_blank">Settings Shortcut</a></li> <li><a 
+  href="intent://com.nokia.updatecenter/#Intent;scheme=android-app;end" target="_blank">Software Updates</a></li> <li><a 
+  href="intent://com.nokia.security/#Intent;scheme=android-app;end" target="_blank">Security Center</a></li> <li><a 
+  href="intent://com.nokia.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager</a></li> <li><a 
+  href="intent://com.nokia.batteryagent/#Intent;scheme=android-app;end" target="_blank">Battery Saver</a></li> <li><a 
+  href="intent://com.nokia.mdm.#Intent;scheme=android-app;end" target="_blank">Nokia Device Management</a></li> <li><a 
+  href="intent://com.nokia.feedback/#Intent;scheme=android-app;end" target="_blank">Feedback App</a></li> <li><a 
+  href="intent://com.nokia.support/#Intent;scheme=android-app;end" target="_blank">My Nokia Support</a></li> <li><a 
+  href="intent://com.nokia.firmwareupdate/#Intent;scheme=android-app;end" target="_blank">Firmware Update</a></li> <li><a 
+  href="intent://com.nokia.diagnostics/#Intent;scheme=android-app;end" target="_blank">Diagnostics Tool</a></li> <li><a 
+  href="intent://com.nokia.contacts/#Intent;scheme=android-app;end" target="_blank">Contacts App</a></li> <li><a 
+  href="intent://com.nokia.fmradio/#Intent;scheme=android-app;end" target="_blank">FM Radio</a></li> <li><a 
+  href="intent://com.nokia.calculator/#Intent;scheme=android-app;end" target="_blank">Calculator</a></li> <li><a 
+  href="intent://com.nokia.notes/#Intent;scheme=android-app;end" target="_blank">Notes</a></li> <li><a 
+  href="intent://com.nokia.setupwizard/#Intent;scheme=android-app;end" target="_blank">Setup Wizard</a></li>
+</ul> </section> <section id="asus"> <h3>Asus</h3> <ul> <li><a href="intent://com.asus.launcher/#Intent;scheme=android-app;end" 
+  target="_blank">ZenUI Launcher</a></li> <li><a href="intent://com.asus.splitscreen/#Intent;scheme=android-app;end" 
+  target="_blank">Split Screen Settings</a></li> <li><a href="intent://com.asus.powergenie/#Intent;scheme=android-app;end" 
+  target="_blank">PowerMaster</a></li> <li><a href="intent://com.asus.filemanager/#Intent;scheme=android-app;end" 
+  target="_blank">File Manager</a></li> <li><a href="intent://com.asus.mobilemanager/#Intent;scheme=android-app;end" 
+  target="_blank">Mobile Manager</a></li> <li><a href="intent://com.asus.sound/#Intent;scheme=android-app;end" 
+  target="_blank">Audio Wizard</a></li> <li><a href="intent://com.asus.themestore/#Intent;scheme=android-app;end" 
+  target="_blank">Theme Store</a></li> <li><a href="intent://com.asus.surepet/#Intent;scheme=android-app;end" 
+  target="_blank">Sure Pet</a></li> <li><a href="intent://com.asus.smartkey/#Intent;scheme=android-app;end" 
+  target="_blank">Smart Key</a></li> <li><a href="intent://com.asus.gamegenie/#Intent;scheme=android-app;end" 
+  target="_blank">Game Genie</a></li> <li><a href="intent://com.asus.fmradio/#Intent;scheme=android-app;end" target="_blank">FM 
+  Radio</a></li> <li><a href="intent://com.asus.weather/#Intent;scheme=android-app;end" target="_blank">Asus Weather</a></li> 
+  <li><a href="intent://com.asus.contacts/#Intent;scheme=android-app;end" target="_blank">Asus Contacts</a></li> <li><a 
+  href="intent://com.asus.calculator/#Intent;scheme=android-app;end" target="_blank">Asus Calculator</a></li> <li><a 
+  href="intent://com.asus.dialer/#Intent;scheme=android-app;end" target="_blank">Asus Dialer</a></li> <li><a 
+  href="intent://com.asus.gallery/#Intent;scheme=android-app;end" target="_blank">Gallery</a></li> <li><a 
+  href="intent://com.asus.setupwizard/#Intent;scheme=android-app;end" target="_blank">Setup Wizard</a></li> <li><a 
+  href="intent://com.asus.security#Intent;scheme=android-app;end" target="_blank">Security Center</a></li> <li><a 
+  href="intent://com.asus.updatecenter/#Intent;scheme=android-app;end" target="_blank">System Update</a></li>
+</ul> </section> <section id="realme"> <h3>Realme</h3> <ul> <li><a 
+  href="intent://com.realme.backuprestore/#Intent;scheme=android-app;end" target="_blank">Realme Clone Phone</a></li> <li><a 
+  href="intent://com.realme.securitycenter/#Intent;scheme=android-app;end" target="_blank">Security Center</a></li> <li><a 
+  href="intent://com.realme.theme/#Intent;scheme=android-app;end" target="_blank">Theme Store</a></li> <li><a 
+  href="intent://com.realme.camera/#Intent;scheme=android-app;end" target="_blank">Realme Camera</a></li> <li><a 
+  href="intent://com.realme.weather/#Intent;scheme=android-app;end" target="_blank">Weather App</a></li> <li><a 
+  href="intent://com.realme.filemanager/#Intent;scheme=android-app;end" target="_blank">File Manager</a></li> <li><a 
+  href="intent://com.realme.powerutil/#Intent;scheme=android-app;end" target="_blank">Power Master</a></li> <li><a 
+  href="intent://com.realme.calculator/#Intent;scheme=android-app;end" target="_blank">Calculator</a></li> <li><a 
+  href="intent://com.realme.updates/#Intent;scheme=android-app;end" target="_blank">Software Updates</a></li> <li><a 
+  href="intent://com.realme.backuprestore/#Intent;scheme=android-app;end" target="_blank">Backup &amp; Restore</a></li> <li><a 
+  href="intent://com.realme.fingerprint/#Intent;scheme=android-app;end" target="_blank">Fingerprint Settings</a></li> <li><a 
+  href="intent://com.realme.phoneclone/#Intent;scheme=android-app;end" target="_blank">Phone Clone</a></li> <li><a 
+  href="intent://com.realme.gameassistant/#Intent;scheme=android-app;end" target="_blank">Game Assistant</a></li> <li><a 
+  href="intent://com.realme.clonephone/#Intent;scheme=android-app;end" target="_blank">Clone Phone</a></li> <li><a 
+  href="intent://com.realme.soundrecorder/#Intent;scheme=android-app;end" target="_blank">Sound Recorder</a></li> <li><a 
+  href="intent://com.realme.screenrecorder/#Intent;scheme=android-app;end" target="_blank">Screen Recorder</a></li> <li><a 
+  href="intent://com.realme.health/#Intent;scheme=android-app;end" target="_blank">Realme Health</a></li>
+</ul> </section> <section id="google_pixel"> <h3>Google Pixel</h3> <ul> <li><a 
+  href="intent://com.google.android.apps.nexuslauncher/#Intent;scheme=android-app;end" target="_blank">Pixel Launcher</a></li> 
+  <li><a href="intent://com.google.android.marvin.monet#Intent;scheme=android-app;end" target="_blank">Material You Theme 
+  Settings</a></li> <li><a href="intent://com.google.android.apps.security#Intent;scheme=android-app;end" target="_blank">Pixel 
+  Security Hub</a></li> <li><a href="intent://com.google.android.apps.stamp#Intent;scheme=android-app;end" 
+  target="_blank">Caller ID &amp; Spam</a></li> <li><a href="intent://com.google.android.as#Intent;scheme=android-app;end" 
+  target="_blank">At A Glance Settings</a></li> <li><a 
+  href="intent://com.google.android.settings.intelligence.modules.personalization.PersonalizationLaunchActivity#Intent;scheme=android-app;end" 
+  target="_blank">Personalization Settings</a></li> <li><a 
+  href="intent://com.google.android.settings.intelligence.modules.privacy.PrivacySettingsLaunchActivity#Intent;scheme=android-app;end" 
+  target="_blank">Privacy Settings</a></li> <li><a href="intent://com.google.android.apps.dock#Intent;scheme=android-app;end" 
+  target="_blank">Dock Settings</a></li> <li><a href="intent://com.google.android.apps.recorder#Intent;scheme=android-app;end" 
+  target="_blank">Recorder App</a></li> <li><a href="intent://com.google.android.apps.photos#Intent;scheme=android-app;end" 
+  target="_blank">Google Photos</a></li> <li><a href="intent://com.google.android.apps.turbo#Intent;scheme=android-app;end" 
+  target="_blank">Battery &amp; Adaptive Charging</a></li> <li><a 
+  href="intent://com.google.android.apps.wellbeing#Intent;scheme=android-app;end" target="_blank">Digital Wellbeing</a></li> 
+  <li><a href="intent://com.google.android.apps.subscriptions.red#Intent;scheme=android-app;end" target="_blank">Subscriptions 
+  &amp; Pixel Pass</a></li> <li><a href="intent://com.google.android.permissioncontroller#Intent;scheme=android-app;end" 
+  target="_blank">App Permissions Manager</a></li> <li><a 
+  href="intent://com.google.android.apps.accessibility.soundamplifier#Intent;scheme=android-app;end" target="_blank">Sound 
+  Amplifier</a></li> <li><a 
+  href="intent://com.google.android.apps.accessibility.soundnotifications#Intent;scheme=android-app;end" target="_blank">Sound 
+  Notifications</a></li> <li><a href="intent://com.google.android.apps.accessibility.voiceaccess#Intent;scheme=android-app;end" 
+  target="_blank">Voice Access</a></li> <li><a href="intent://com.google.android.apps.talkback#Intent;scheme=android-app;end" 
+  target="_blank">TalkBack Settings</a></li> <li><a 
+  href="intent://com.google.android.apps.pixelmigrate#Intent;scheme=android-app;end" target="_blank">Pixel Setup &amp; 
+  Migrate</a></li> <li><a href="intent://com.google.android.apps.wifi.settings.enterprise#Intent;scheme=android-app;end" 
+  target="_blank">Wi‑Fi Enterprise Settings</a></li>
+</ul> </section> <footer> ** FOR TESTING PURPOSES ONLY ** </footer> <script> 
+document.getElementById('sectionSelector').addEventListener('change', function() {
+  var value = this.value; document.querySelectorAll('section').forEach(function(section) { if (value === 'all') { 
+      section.style.display = 'block';
+    } else {
+      section.style.display = (section.id === value) ? 'block' : 'none';
+    }
+  });
+});
+</script></body>
+</html>
