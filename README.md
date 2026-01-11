@@ -8,3 +8,7 @@ There is 3 versions, Big ass listing of useful android intents down to a page wi
 I'm thinking this might work with a BLE spam but I haven't looked into it at all.
 
 Good luck and if anyone gets intents to work in unusal ways please let me know.
+
+# To give it a go click the link below in your android devices' browser
+
+[Intent-tester webpage](https://zeldoon.github.io)
