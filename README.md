@@ -1,7 +1,9 @@
 # Android-Intents---FRP-bypass
 Basic html site where all the links are all android intents. The idea was to create a captive portal with flipper zero to have FRP on the go. 
 
-So far it hasn't worked how I would like but it does work. I'd recommend just connecting to your local network and running the index.html with the http server module in python.
+~~So far it hasn't worked how I would like but it does work. I'd recommend just connecting to your local network and running the index.html with the http server module in python.~~
+
+This was easier than I thought, you literally just need to ensure the file name is changed to index.html but the ole flipper loves to crash if the intent doesn't work with your android device so don't be a fool use the correct tool ie dont use pixel intents if you dont have a pixel.
 
 There is 3 versions, Big ass listing of useful android intents down to a page with the single intent [this is for flipper zeros size restriction...]
 
